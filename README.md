@@ -1,11 +1,11 @@
-# [AirBnB clone]()
+# [AirBnB clone - The Console]()
 
 <p float="left">
 <img src="https://lh3.googleusercontent.com/oVJxT1yn7vwaEM8t9A5MGL6emG0j-_uqHa5H8ikWLvl6Ka-nVmUJZblqWDqPiY-S6itPLnZNgcc8rviK8AVT65l_a3zHiyctwy8=s0" width="245" height="150"/>
 <img src="https://github.com/leulyk/AirBnB_clone/blob/main/AirBnB.png" width = "355" height = "150" />
 </p>
 
-## The Interpreter
+> This is the first step towards building a full web application: the **AirBnB clone**. This project builds an interpreter to manage the AirBnB objects.
 
 The interpreter manages the objects of the project:
 

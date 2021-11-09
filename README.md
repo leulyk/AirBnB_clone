@@ -16,39 +16,39 @@ The interpreter manages the objects of the project:
 - Update attributes of an object
 - Destroy an object
 
-# Execution
+### Execution
 
-The shell should work like this in interactive mode:
+	The shell should work like this in interactive mode:
 
-$ ./console.py
-(hbnb) help
+	$ ./console.py
+	(hbnb) help
 
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
+### Documented commands (type help <topic>):
 
-(hbnb)
-(hbnb)
-(hbnb) quit
-$
-But also in non-interactive mode:
+	EOF  help  quit
 
-$ echo "help" | ./console.py
-(hbnb)
+	(hbnb)
+	(hbnb)
+	(hbnb) quit
+	$
+	But also in non-interactive mode:
 
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-$ cat test\_help
-help
-$
-$ cat test\_help | ./console.py
-(hbnb)
+	$ echo "help" | ./console.py
+	(hbnb)
 
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
+### Documented commands (type help <topic>):
+
+	EOF  help  quit
+	(hbnb)
+	$
+	$ cat test\_help
+	help
+	$
+	$ cat test\_help | ./console.py
+	(hbnb)
+
+### Documented commands (type help <topic>):
+
+	EOF  help  quit
+	(hbnb)
+	$

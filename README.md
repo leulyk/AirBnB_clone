@@ -3,7 +3,7 @@
 <p float="left">
 <img src="https://lh3.googleusercontent.com/oVJxT1yn7vwaEM8t9A5MGL6emG0j-_uqHa5H8ikWLvl6Ka-nVmUJZblqWDqPiY-S6itPLnZNgcc8rviK8AVT65l_a3zHiyctwy8=s0" width="245" height="150"/>
 <img src="https://blog.holbertonschool.com/wp-content/uploads/2019/04/instagram_feed180.jpg" width = "150" height="150"/>
-<img src="https://github.com/leulyk/AirBnB_clone/blob/main/AirBnB.png" width = "150" height = "150" />
+<img src="https://github.com/leulyk/AirBnB_clone/blob/main/AirBnB.png" width = "150" height = "355" />
 </p>
 
 ## The Interpreter
@@ -16,14 +16,15 @@ The interpreter manages the objects of the project:
 - Update attributes of an object
 - Destroy an object
 
-### Execution
+- ### Execution
 
-	The shell should work like this in interactive mode:
+The shell should work like this in interactive mode:
 
 	$ ./console.py
 	(hbnb) help
 
-### Documented commands (type help <topic>):
+	Documented commands (type help <topic>):
+	========================================
 
 	EOF  help  quit
 
@@ -31,23 +32,26 @@ The interpreter manages the objects of the project:
 	(hbnb)
 	(hbnb) quit
 	$
-	But also in non-interactive mode:
+
+But also in non-interactive mode:
 
 	$ echo "help" | ./console.py
 	(hbnb)
 
-### Documented commands (type help <topic>):
+	Documented commands (type help <topic>):
+	========================================	
 
 	EOF  help  quit
 	(hbnb)
 	$
-	$ cat test\_help
+	$ cat test_help
 	help
 	$
-	$ cat test\_help | ./console.py
+	$ cat test_help | ./console.py
 	(hbnb)
 
-### Documented commands (type help <topic>):
+	Documented commands (type help <topic>):
+	========================================	
 
 	EOF  help  quit
 	(hbnb)

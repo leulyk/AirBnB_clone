@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-    module containing the BaseModel class for the AirBnB console
+    module containing the BaseModel class for the HBnB console
 """
 
 import json
@@ -12,7 +12,7 @@ from dateutil import parser
 
 class BaseModel:
     """
-        base classes that defines common attributes/methods for other classes
+        base class that defines common attributes/methods for other classes
     """
     def __init__(self, *args, **kwargs):
         """ constructor of the BaseModel class """

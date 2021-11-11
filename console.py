@@ -2,6 +2,7 @@
 
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     """
     HBNBCommand - command line interface implementation
@@ -15,14 +16,12 @@ class HBNBCommand(cmd.Cmd):
         # print("Thankyou for using hbnb console")
         self.close()
         quit()
-    
+
     def emptyline(self):
         pass
 
     def do_EOF(self, line):
-        """
-            handle EOF
-        """
+        """ handle EOF """
         return True
 
     def help_quit(self):
@@ -33,6 +32,6 @@ class HBNBCommand(cmd.Cmd):
             self.file.close()
             self.file = None
 
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
-

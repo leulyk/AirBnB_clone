@@ -10,6 +10,7 @@ class HBNBCommand(cmd.Cmd):
     # intro = "Welcome to the hbnb console"
     prompt = "(hbnb) "
     file = None
+
     def do_quit(self, line):
         # print("Thankyou for using hbnb console")
         self.close()
@@ -19,8 +20,10 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_EOF(self, line):
+        """
+            handle EOF
+        """
         return True
-
 
     def help_quit(self):
         print('\n'.join(['Quit command to exit the program\n']))

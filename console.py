@@ -11,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
     """
 
     classes = {
-        BaseModel: BaseModel
+        "BaseModel": BaseModel
     }
     # intro = "Welcome to the hbnb console"
     prompt = "(hbnb) "
@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
         """show string representation of an object instance"""
         new = line.partition(" ")
         class_name = new[0]
-        class_id = new[1]
+        class_id = new[2]
 
         if not class_name:
             print("** class name missing **")
@@ -69,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
         class_key = class_name + "." + class_id
 
         try:
-            print(storage.FileStorage.objects[class_key])
+            print(storage._FileStorage__objects[class_key])
         except KeyError:
             print("** no instance found **")
             

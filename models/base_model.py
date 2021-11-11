@@ -4,10 +4,10 @@
     module containing the BaseModel class for the HBnB console
 """
 
-import json
 import uuid
 from datetime import datetime
 from dateutil import parser
+from models import storage
 
 
 class BaseModel:
@@ -28,6 +28,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
+            storage.new(self)
 
     def __str__(self):
         """ string representation of the BaseModel class """
@@ -40,10 +41,12 @@ class BaseModel:
             with current time
         """
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """ dictionary representation of a BaseModel object """
-        self.__dict__['__class__'] = type(self).__name__
-        self.__dict__['created_at'] = self.__dict__['created_at'].isoformat()
-        self.__dict__['updated_at'] = self.__dict__['updated_at'].isoformat()
-        return self.__dict__
+        dict_copy = self.__dict__.copy()
+        dict_copy['__class__'] = type(self).__name__
+        dict_copy['created_at'] = self.created_at.isoformat()
+        dict_copy['updated_at'] = self.updated_at.isoformat()
+        return dict_copy

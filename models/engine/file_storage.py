@@ -42,6 +42,12 @@ class FileStorage:
         if path.exists(file_name):
             with open(file_name, "r") as file:
                 from models.base_model import BaseModel
+                from models.user import User
+                from models.state import State
+                from models.city import City
+                from models.amenity import Amenity
+                from models.place import Place
+                from models.review import Review
                 objs = json.loads(file.read())
                 for key, value in objs.items():
                     cls = value["__class__"]

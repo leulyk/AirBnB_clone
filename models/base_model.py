@@ -24,10 +24,13 @@ class BaseModel:
                     else:
                         new_value = value
                     setattr(self, key, new_value)
-        else:
+        if 'id' not in kwargs.keys():
             self.id = str(uuid.uuid4())
+        if 'created_at' not in kwargs.keys():
             self.created_at = datetime.now()
+        if 'updated_at' not in kwargs.keys():
             self.updated_at = self.created_at
+        if not kwargs or len(kwargs) == 0:
             storage.new(self)
 
     def __str__(self):

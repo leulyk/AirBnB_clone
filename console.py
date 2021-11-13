@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import cmd
+import sys
 from models.base_model import BaseModel
 from models.user import User
 from models.place import Place
@@ -29,6 +30,12 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
     file = None
 
+    def precmd(self, line):
+        """ initial configurations """
+        if not sys.stdin.isatty():
+            print()
+        return cmd.Cmd.precmd(self, line)
+
     def do_quit(self, line):
         # print("Thankyou for using hbnb console")
         self.close()
@@ -39,6 +46,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, line):
         """ handle EOF """
+        print()
         return True
 
     def help_quit(self):
@@ -152,5 +160,5 @@ class HBNBCommand(cmd.Cmd):
             self.file = None
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()

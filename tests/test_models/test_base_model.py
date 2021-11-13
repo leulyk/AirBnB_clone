@@ -33,8 +33,8 @@ class TestBaseModel(unittest.TestCase):
         """ tests the BaseModel constructor with a dictionary argument """
         self.assertTrue(hasattr(self.model2, 'id'))
         self.assertTrue(hasattr(self.model2, 'name'))
-        self.assertFalse(hasattr(self.model2, 'created_at'))
-        self.assertFalse(hasattr(self.model2, 'updated_at'))
+        self.assertTrue(hasattr(self.model2, 'created_at'))
+        self.assertTrue(hasattr(self.model2, 'updated_at'))
         self.assertTrue(self.model2.__class__ not in self.model2.__dict__)
 
     def test_unique_id(self):
@@ -56,10 +56,10 @@ class TestBaseModel(unittest.TestCase):
         """ tests dictionary representation of a BaseModel instance """
         dct = self.model1.to_dict()
         self.assertTrue('__class__' in dct.keys())
-        self.assertTrue(dct['__class__'] is type(self.model1).__name__)
+        self.assertEqual(dct['__class__'], type(self.model1).__name__)
         self.assertEqual(dct['created_at'], self.model1.created_at.isoformat())
         self.assertEqual(dct['updated_at'], self.model1.updated_at.isoformat())
-        
+
     def test_str(self):
         """ test the __str__ magic method """
         expected = "[{}] ({}) {}".format(type(self.model1).__name__,

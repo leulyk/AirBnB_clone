@@ -34,6 +34,16 @@ class HBNBCommand(cmd.Cmd):
         """ initial configurations """
         if not sys.stdin.isatty():
             print()
+        if '.' in line:
+            args = line.split('.')
+            cls = args[0]
+            cmds = args[1].replace('.', ' ').replace(',', ' ')
+            cmds = cmds.replace('(', ' ').replace(')', ' ')
+            cmds = cmds.split()
+            line = cmds[0] + ' ' + cls
+            for i in range(1, len(cmds)):
+                cmds[i] = cmds[i].replace('"', '').replace("'", '')
+                line = line + ' ' + cmds[i]
         return cmd.Cmd.precmd(self, line)
 
     def do_quit(self, line):
@@ -128,6 +138,20 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
             else:
                 print("** no instance found **")
+
+    def do_count(self, line):
+        """ counts number of instances of a class """
+        if not line:
+            print("** class name missing **")
+            return
+        if line not in HBNBCommand.classes:
+            print("** class doesn't exist **")
+            return
+        count = 0
+        for key in storage._FileStorage__objects.keys():
+            if key.split('.')[0] == line:
+                count = count + 1
+        print(count)
 
     def test_arguments(self, line):
         """ test class existence, class name and instance id """

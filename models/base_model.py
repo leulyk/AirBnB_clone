@@ -16,7 +16,7 @@ class BaseModel:
     """
     def __init__(self, *args, **kwargs):
         """ constructor of the BaseModel class """
-        if kwargs:
+        if kwargs and len(kwargs) > 0:
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key in ['created_at', 'updated_at']:
@@ -24,13 +24,16 @@ class BaseModel:
                     else:
                         new_value = value
                     setattr(self, key, new_value)
-        if 'id' not in kwargs.keys():
+            if 'id' not in kwargs.keys():
+                self.id = str(uuid.uuid4())
+            if 'created_at' not in kwargs.keys():
+                self.created_at = datetime.now()
+            if 'updated_at' not in kwargs.keys():
+                self.updated_at = self.created_at
+        else:
             self.id = str(uuid.uuid4())
-        if 'created_at' not in kwargs.keys():
             self.created_at = datetime.now()
-        if 'updated_at' not in kwargs.keys():
             self.updated_at = self.created_at
-        if not kwargs or len(kwargs) == 0:
             storage.new(self)
 
     def __str__(self):

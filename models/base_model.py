@@ -6,7 +6,6 @@
 
 import uuid
 from datetime import datetime
-from dateutil import parser
 from models import storage
 
 
@@ -20,7 +19,7 @@ class BaseModel:
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key in ['created_at', 'updated_at']:
-                        new_value = parser.parse(value)
+                        new_value = datetime.fromisoformat(value)
                     else:
                         new_value = value
                     setattr(self, key, new_value)

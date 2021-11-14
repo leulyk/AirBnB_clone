@@ -24,12 +24,6 @@ class BaseModel:
                     else:
                         new_value = value
                     setattr(self, key, new_value)
-            if 'id' not in kwargs.keys():
-                self.id = str(uuid.uuid4())
-            if 'created_at' not in kwargs.keys():
-                self.created_at = datetime.now()
-            if 'updated_at' not in kwargs.keys():
-                self.updated_at = self.created_at
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
@@ -53,6 +47,8 @@ class BaseModel:
         """ dictionary representation of a BaseModel object """
         dict_copy = self.__dict__.copy()
         dict_copy['__class__'] = type(self).__name__
-        dict_copy['created_at'] = self.created_at.isoformat()
-        dict_copy['updated_at'] = self.updated_at.isoformat()
+        if 'created_at' in dict_copy.keys():
+            dict_copy['created_at'] = self.created_at.isoformat()
+        if 'updated_at' in dict_copy.keys():
+            dict_copy['updated_at'] = self.updated_at.isoformat()
         return dict_copy

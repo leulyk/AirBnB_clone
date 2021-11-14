@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+""" module containing the class implementing the console functionality """
+
 import cmd
 import sys
 from models.base_model import BaseModel
@@ -47,11 +49,12 @@ class HBNBCommand(cmd.Cmd):
         return cmd.Cmd.precmd(self, line)
 
     def do_quit(self, line):
-        # print("Thankyou for using hbnb console")
+        """ Quit command to exit the program """
         self.close()
         quit()
 
     def emptyline(self):
+        """ do nothing if empty line specified """
         pass
 
     def do_EOF(self, line):
@@ -60,6 +63,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def help_quit(self):
+        """ help statement for the quit command """
         print('\n'.join(['Quit command to exit the program\n']))
 
     def do_create(self, line):
@@ -179,6 +183,7 @@ class HBNBCommand(cmd.Cmd):
         return (success, class_name, class_id)
 
     def close(self):
+        """ finalize """
         if self.file:
             self.file.close()
             self.file = None

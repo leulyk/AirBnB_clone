@@ -49,22 +49,18 @@ class HBNBCommand(cmd.Cmd):
         return cmd.Cmd.precmd(self, line)
 
     def do_quit(self, line):
-        """ Quit command to exit the program """
+        """Quit command to exit the program"""
         self.close()
         quit()
 
     def emptyline(self):
-        """ do nothing if empty line specified """
+        """Do nothing if empty line specified """
         pass
 
     def do_EOF(self, line):
-        """ handle EOF """
+        """Handle End-of-File"""
         print()
         return True
-
-    def help_quit(self):
-        """ help statement for the quit command """
-        print('\n'.join(['Quit command to exit the program\n']))
 
     def do_create(self, line):
         """Creates an object of any available class"""
@@ -80,7 +76,7 @@ class HBNBCommand(cmd.Cmd):
         print(new_instance.id)
 
     def do_show(self, line):
-        """show string representation of an object instance"""
+        """Shows string representation of an object instance"""
         result = self.test_arguments(line)
 
         if result[0]:
@@ -91,10 +87,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_all(self, line):
-        """
-            prints all instances created or all instances of a
-            certain class
-        """
+        """Prints all instances created or all instances of a certain class"""
         if line and line not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
@@ -109,7 +102,7 @@ class HBNBCommand(cmd.Cmd):
         print(lst)
 
     def do_destroy(self, line):
-        """ deletes an instance based on class name or id """
+        """Deletes an instance based on class name or id"""
         result = self.test_arguments(line)
 
         if result[0]:
@@ -121,10 +114,8 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_update(self, line):
-        """
-            updates an instance based on class name and id by adding or
-            updating attribute
-        """
+        """Updates an instance based on class name and id by
+        adding or updating attribute"""
         result = self.test_arguments(line)
         if result[0]:
             tokens = line.split()
@@ -144,7 +135,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_count(self, line):
-        """ counts number of instances of a class """
+        """Counts number of instances of a class"""
         if not line:
             print("** class name missing **")
             return

@@ -15,7 +15,6 @@ class TestCity(unittest.TestCase):
         self.c = City()
         dct = self.c.to_dict()
         self.c2 = City(**dct)
-        self.c2.name = "addis ababa"
         self.c2.is_capital = "yes"
 
     def test_constructor(self):
@@ -28,9 +27,12 @@ class TestCity(unittest.TestCase):
 
     def test_constructor_kwargs(self):
         """ tests the City constructor with arguments """
+        self.assertTrue(hasattr(self.c2, 'state_id'))
         self.assertTrue(hasattr(self.c2, 'name'))
-        self.assertTrue(hasattr(self.c2, 'is_capital'))
+        self.assertTrue(hasattr(self.c2, 'id'))
         self.assertTrue(hasattr(self.c2, 'created_at'))
+        self.assertTrue(hasattr(self.c2, 'updated_at'))
+        self.assertTrue(hasattr(self.c2, 'is_capital'))
 
     def test_str(self):
         """ test the __str__ magic method """

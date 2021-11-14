@@ -13,7 +13,10 @@ class TestCity(unittest.TestCase):
     def setUp(self):
         """ sets up instance of the City class for testing """
         self.c = City()
-        self.c2 = City(**{'name': 'Addis Ababa', 'is_capital': 'yes'})
+        dct = self.c.to_dict()
+        self.c2 = City(**dct)
+        self.c2.name = "addis ababa"
+        self.c2.is_capital = "yes"
 
     def test_constructor(self):
         """ tests the City constructor with no arguments """

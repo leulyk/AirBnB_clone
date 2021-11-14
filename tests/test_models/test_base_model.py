@@ -16,7 +16,9 @@ class TestBaseModel(unittest.TestCase):
     def setUp(self):
         """ sets up instances of BaseModel for testing """
         self.model1 = BaseModel()
-        self.model2 = BaseModel(**{'id': '1456-8912-1289', 'name': 'MyModel'})
+        dct = self.model1.to_dict()
+        self.model2 = BaseModel(**dct)
+        self.model2.name = "Leul"
 
     def tearDown(self):
         """ cleans up the JSON file """

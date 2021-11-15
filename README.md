@@ -70,7 +70,7 @@ But also in non-interactive mode:
 | **help** | *- help* | List available commands with "help" or detailed help with "help cmd". |
 | **quit** | *- quit* | Quit command to exit the program |
 | **show** | *- show <class_name> <instance_id>* <br/> *- <class_name>.show(<instance_id>)* | Shows string representation of an object instance |
-| **update** | *- update <class_name> <instance_id> <attribute_name> "- <attribute_value>"* <br/> *- <class_name>.update(<instance_id>, <attribute_name>, <attribute_value>)* <br/> *- <class_name>.update(<instance_id>, <dictionary representation>)* | Updates an instance based on class name and id by adding or updating attribute, or by using dictionary |
+| **update** | *- update <class_name> <instance_id> <attribute_name> "- <attribute_value>"* <br/> *- <class_name>.update(<instance_id>, <attribute_name>, <attribute_value>)* <br/> *- <class_name>.update(<instance_id>, <dictionary_representation>)* | Updates an instance based on class name and id by adding or updating attribute, or by using dictionary |
 
 ## Examples
 

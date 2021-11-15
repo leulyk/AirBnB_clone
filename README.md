@@ -58,3 +58,16 @@ But also in non-interactive mode:
 	EOF  help  quit
 	(hbnb)
 	$
+
+## Commands
+
+| Command | Usage | Description |
+| ------- | ----- | ----------- |
+| all | all \<class\_name> / all / \<class\_name>.all()| Prints all instances created or all instances of a certain class |
+| count | |
+| create | |
+| destroy | |
+| help | |
+| quit | |
+| show | |
+| update | |

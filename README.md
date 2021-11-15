@@ -2,10 +2,10 @@
 
 <p float="left">
 <img src="https://lh3.googleusercontent.com/oVJxT1yn7vwaEM8t9A5MGL6emG0j-_uqHa5H8ikWLvl6Ka-nVmUJZblqWDqPiY-S6itPLnZNgcc8rviK8AVT65l_a3zHiyctwy8=s0" width="245" height="150"/>
-<img src="https://github.com/leulyk/AirBnB_clone/blob/main/AirBnB.png" width = "355" height = "150" />
+<img src="https://github.com/leulyk/AirBnB_clone/tree/main/images/AirBnB.png" width = "355" height = "150" />
 </p>
 <p>
-<img src="https://github.com/leulyk/AirBnB_clone/blob/main/framework.png" width="600" height = "320" />
+<img src="https://github.com/leulyk/AirBnB_clone/tree/main/images/framework.png" width="600" height = "320" />
 </p>
 
 > This is the first step towards building a full web application: the **AirBnB clone**. This project builds an interpreter to manage the AirBnB objects.
@@ -70,4 +70,16 @@ But also in non-interactive mode:
 | **help** | *help* | List available commands with "help" or detailed help with "help cmd". |
 | **quit** | *quit* | Quit command to exit the program |
 | **show** | *show <class_name> <instance_id>* <br/> *<class_name>.show(<instance_id>)* | Shows string representation of an object instance |
-| **update** | *update <class_name> <instance_id> <attribute_name> "<attribute_value>"* <br/> *<class_name>.update(<instance_id>, <attribute_name>, <attribute_value>)* <br/> *<class_name>.update(<instance_id> <dictionary representation>)* | Updates an instance based on class name and id by adding or updating attribute, or by using dictionary |
+| **update** | *- update <class_name> <instance_id> <attribute_name> "- <attribute_value>"* <br/> *- <class_name>.update(<instance_id>, <attribute_name>, <attribute_value>)* <br/> *- <class_name>.update(<instance_id>, <dictionary representation>)* | Updates an instance based on class name and id by adding or updating attribute, or by using dictionary |
+
+## Example
+
+<p>
+<img src="https://github.com/leulyk/AirBnB_clone/tree/main/images/example_1.png" />
+</p>
+<p>
+<img src="https://github.com/leulyk/AirBnB_clone/tree/main/images/example_2.png" />
+</p>
+<p>
+<img src="https://github.com/leulyk/AirBnB_clone/tree/main/images/example_3.png" />
+</p>

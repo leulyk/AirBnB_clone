@@ -3,7 +3,6 @@
 <p float="left">
 <img src="https://lh3.googleusercontent.com/oVJxT1yn7vwaEM8t9A5MGL6emG0j-_uqHa5H8ikWLvl6Ka-nVmUJZblqWDqPiY-S6itPLnZNgcc8rviK8AVT65l_a3zHiyctwy8=s0" width="245" height="150"/>
 <img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/AirBnB.png" width = "355" height = "150" />
-https://github.com/leulyk/AirBnB_clone/blob/main/images/AirBnB.png
 </p>
 <p>
 <img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/framework.png" width="600" height = "320" />

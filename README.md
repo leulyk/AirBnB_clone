@@ -1,14 +1,16 @@
-# [AirBnB clone - The Console](https://github.com/leulyk/AirBnB_clone/blob/main/README.md)
+# [AirBnB clone - The console & Web static](https://github.com/leulyk/AirBnB_clone/blob/main/README.md)
 
 <p float="left">
 <img src="https://lh3.googleusercontent.com/oVJxT1yn7vwaEM8t9A5MGL6emG0j-_uqHa5H8ikWLvl6Ka-nVmUJZblqWDqPiY-S6itPLnZNgcc8rviK8AVT65l_a3zHiyctwy8=s0" width="245" height="150"/>
 <img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/AirBnB.png" width = "355" height = "150" />
 </p>
 <p>
-<img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/framework.png" width="600" height = "320" />
+<img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/hbnb_step1.png" width="600" height = "320" />
 </p>
 
-> This is the first step towards building a full web application: the **AirBnB clone**. This project builds an interpreter to manage the AirBnB objects.
+> This is the first step towards building a full web application: the **AirBnB clone**. This project builds an interpreter to manage the AirBnB objects and initiates the front-end development by building the static web page with HTML and CSS.
+
+## [The interpreter](https://github.com/leulyk/AirBnB_clone/blob/main/console.py)
 
 The interpreter manages the objects of the project:
 
@@ -59,8 +61,7 @@ But also in non-interactive mode:
 	(hbnb)
 	$
 
-## Commands
-
+## Commands 
 | Command | Usage | Description |
 | ------- | ----- | ----------- |
 | **all** | *- all <class_name>* <br/> *- all* <br/> *- <class_name>.all()* | Prints all instances created or all instances of a certain class |

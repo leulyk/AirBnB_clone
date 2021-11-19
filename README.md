@@ -5,7 +5,7 @@
 <img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/AirBnB.png" width = "355" height = "150" />
 </p>
 <p>
-<img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/hbnb_step1.png" width="1200" height = "640" />
+<img src="https://github.com/leulyk/AirBnB_clone/blob/main/images/hbnb_step1.png" width="800" height = "425" />
 </p>
 
 > This is the first step towards building a full web application: the **AirBnB clone**. This project builds an interpreter to manage the AirBnB objects and initiates the front-end development by building the static web page with HTML and CSS.

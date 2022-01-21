@@ -50,10 +50,8 @@
 }
 
 .information div {
-/*
     display: inline-block;
     clear: right;
-    */
     width: 100px;
     background-position: center top;
     margin: 4px auto;
@@ -74,9 +72,4 @@
 .number_bathrooms {
     background-image: url("../images/icon_bath.png");
     background-repeat: no-repeat;
-}
-
-.user, .description {
-        font-size: 14px;
-        margin: 2px 0px;
 }
